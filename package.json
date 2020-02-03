@@ -1,0 +1,28 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Express server for graphql",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mihaiblandu/server.git"
+  },
+  "keywords": [
+    "graphql",
+    "express",
+    "nodejs",
+    "backend"
+  ],
+  "author": "mihaiblandu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mihaiblandu/server/issues"
+  },
+  "homepage": "https://github.com/mihaiblandu/server#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
