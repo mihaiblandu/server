@@ -19,6 +19,12 @@ pipeline {
       }
     }
 
+    stage('Test') {
+      steps {
+        sh 'yarn teste2e'
+      }
+    }
+
   }
   triggers {
     pollSCM('* * * * *')
