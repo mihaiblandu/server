@@ -14,6 +14,7 @@ pipeline {
         sh 'npm -v'
         sh 'npm i yarn'
         sh 'yarn -v'
+        sh 'npm i nodemon'
       }
     }
 
