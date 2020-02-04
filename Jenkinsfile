@@ -8,8 +8,20 @@ pipeline {
   }
   stages {
     stage('Build') {
-      steps {
-        sh 'npm install'
+      parallel {
+        stage('Build') {
+          steps {
+            sh 'npm install'
+          }
+        }
+
+        stage('System') {
+          steps {
+            sh 'ls -la'
+            sh 'pwd'
+          }
+        }
+
       }
     }
 
