@@ -7,21 +7,16 @@ pipeline {
 
   }
   stages {
+    stage('System') {
+      steps {
+        sh 'ls -la'
+        sh 'pwd'
+      }
+    }
+
     stage('Build') {
-      parallel {
-        stage('Build') {
-          steps {
-            sh 'npm install'
-          }
-        }
-
-        stage('System') {
-          steps {
-            sh 'ls -la'
-            sh 'pwd'
-          }
-        }
-
+      steps {
+        sh 'npm install'
       }
     }
 
