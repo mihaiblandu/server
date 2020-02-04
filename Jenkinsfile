@@ -12,6 +12,7 @@ pipeline {
         sh 'ls -la'
         sh 'pwd'
         sh 'npm -v'
+        sh 'npm i yarn'
       }
     }
 
