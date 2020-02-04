@@ -1,21 +1,18 @@
 pipeline {
-  stage('npm-build') {
-      agent {
-          docker {
-              image 'node:7.4'
-          }
-      }
-
-      steps {
-          echo "Branch is ${env.BRANCH_NAME}..."
-
-          withNPM(npmrcConfig:'my-custom-npmrc') {
-              echo "Performing npm build..."
-              sh 'npm install'
-          }
-      }
-  }
-  triggers {
+    agent {
+        docker {
+            image 'node:6-alpine' 
+            args '-p 3000:3000' 
+        }
+    }
+    stages {
+        stage('Build') { 
+            steps {
+                sh 'npm install' 
+            }
+        }
+    }
+      triggers {
       pollSCM('* * * * *')
     }
 }
