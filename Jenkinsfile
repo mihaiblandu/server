@@ -9,12 +9,7 @@ pipeline {
   stages {
     stage('System') {
       steps {
-        sh 'ls -la'
         sh 'pwd'
-        sh 'npm -v'
-        sh 'npm i yarn'
-        sh 'yarn -v'
-        sh 'npm i nodemon'
       }
     }
 
